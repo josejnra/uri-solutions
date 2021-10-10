@@ -41,4 +41,9 @@ FROM
 	    count(r.temperature) OVER (PARTITION BY r.mark) AS number_of_records
 FROM records r) AS t
 WHERE t.row = 1;
+
+SELECT temperature, count(mark) as number_of_records
+FROM records
+GROUP BY mark, temperature
+ORDER BY mark;
 */
