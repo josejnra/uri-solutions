@@ -12,7 +12,7 @@ services:
       - ./postgres_data:/var/lib/postgresql/data
   
   pgadmin:
-    image: dpage/pgadmin4:6
+    image: dpage/pgadmin4:6.1
     container_name: pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=user@domain.com
@@ -23,7 +23,7 @@ services:
       - ./pgadmin:/var/lib/pgadmin
 
   cloudbeaver:
-    image: dbeaver/cloudbeaver:21.1.5
+    image: dbeaver/cloudbeaver:21.2.1
     container_name: cloudbeaver
     ports: 
       - 8978:8978
